@@ -1,19 +1,23 @@
-package main
-
-import (
-	"fmt"
-)
+package sort
 
 type quicksort struct {
 }
 
-func (s *quicksort) Sort(slice []int, low, high int) {
+func NewQuicksort() Sort {
+	return &quicksort{}
+}
+
+func (s *quicksort) Sort(arr []int) []int {
+	return []int{}
+}
+
+func (s *quicksort) InPlaceSort(slice []int, low, high int) {
 	if low >= high {
 		return
 	}
 	p := s.partition(slice, low, high)
-	s.Sort(slice, low, p-1)
-	s.Sort(slice, p+1, high)
+	s.InPlaceSort(slice, low, p-1)
+	s.InPlaceSort(slice, p+1, high)
 
 }
 
@@ -47,12 +51,4 @@ func (s *quicksort) partition(slice []int, low, high int) int {
 func (s *quicksort) FindPivotIndex(slice []int, low int, high int) int {
 	// Return mid index
 	return (low + high) / 2
-}
-
-func main() {
-	unsorted := []int{3, 5, 6, 1, 2, 8, 9, 4, 7}
-	// Call quicksort
-	qs := &quicksort{}
-	qs.Sort(unsorted, 0, len(unsorted)-1)
-	fmt.Print(unsorted)
 }

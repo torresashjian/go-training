@@ -7,6 +7,9 @@ func NewMergeSort() Sort {
 	return &mergeSort{}
 }
 
+func (ms *mergeSort) InPlaceSort(slice []int, low, high int) {
+}
+
 func (ms *mergeSort) Sort(arr []int) []int {
 	return ms.doMergeSort(arr)
 }

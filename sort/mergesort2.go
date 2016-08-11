@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package sort
 
 func MergeSort(slice []int) []int {
 	if len(slice) < 2 {
@@ -34,10 +30,4 @@ func Merge(left, right []int) []int {
 		}
 	}
 	return merged
-}
-
-func main() {
-	unsorted := []int{4, 3, 6, 7, 8, 9, 2, 1, 5}
-	fmt.Print(MergeSort(unsorted))
-
 }
