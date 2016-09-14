@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/migueltorreslopez/go-training/p2p"
 	"github.com/migueltorreslopez/go-training/sort"
+	"github.com/migueltorreslopez/go-training/strings"
 )
 
 func main_quicksort() {
@@ -18,6 +20,13 @@ func main_mergesort2() {
 	fmt.Print(sort.MergeSort(unsorted))
 }
 
+func main_discoverupnp() {
+	fmt.Println("In Main discoverupnp")
+	p2p.DiscoverAllUPnP()
+	p2p.DiscoverAllPMPs()
+}
+
 func main() {
-	fmt.Printf("Here")
+	fmt.Println("In Main is palindrome")
+	fmt.Println("Is palindrome 1:", strings.IsPalindrome("abc cba"))
 }
