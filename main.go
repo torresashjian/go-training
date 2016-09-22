@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/migueltorreslopez/go-training/arrays"
 	"github.com/migueltorreslopez/go-training/p2p"
 	"github.com/migueltorreslopez/go-training/sort"
 	"github.com/migueltorreslopez/go-training/strings"
@@ -26,7 +27,12 @@ func main_discoverupnp() {
 	p2p.DiscoverAllPMPs()
 }
 
-func main() {
+func main_palindrome() {
 	fmt.Println("In Main is palindrome")
 	fmt.Println("Is palindrome 1:", strings.IsPalindrome("abc cba"))
+}
+
+func main() {
+	fmt.Println("In main arrays_basic")
+	arrays.CreateArray()
 }
