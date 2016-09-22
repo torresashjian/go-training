@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/migueltorreslopez/go-training/arrays"
-	"github.com/migueltorreslopez/go-training/p2p"
-	"github.com/migueltorreslopez/go-training/sort"
-	"github.com/migueltorreslopez/go-training/strings"
+	"github.com/torresashjian/go-training/arrays"
+	"github.com/torresashjian/go-training/p2p"
+	"github.com/torresashjian/go-training/sort"
+	"github.com/torresashjian/go-training/strings"
 )
 
 func main_quicksort() {
@@ -32,7 +32,7 @@ func main_palindrome() {
 	fmt.Println("Is palindrome 1:", strings.IsPalindrome("abc cba"))
 }
 
-func main() {
+func main_arrays_basic() {
 	fmt.Println("In main arrays_basic")
 	arrays.CreateArray()
 }
