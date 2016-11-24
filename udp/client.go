@@ -8,12 +8,6 @@ import (
 	"time"
 )
 
-func CheckError(err error) {
-	if err != nil {
-		fmt.Println("Error: ", err)
-	}
-}
-
 func Send() {
 	serverAddr, err := net.ResolveUDPAddr("udp", "127.0.0.1:10001")
 	CheckError(err)
