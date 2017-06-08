@@ -1,4 +1,4 @@
-package main2
+package main
 
 import (
 	"fmt"
@@ -6,7 +6,13 @@ import (
 	"github.com/torresashjian/go-training/p2p"
 	"github.com/torresashjian/go-training/sort"
 	"github.com/torresashjian/go-training/strings"
+	"github.com/torresashjian/go-training/types"
 )
+
+func main(){
+	fmt.Println("In TestTypes")
+	types.TestTypes()
+}
 
 func main_quicksort() {
 	unsorted := []int{3, 5, 6, 1, 2, 8, 9, 4, 7}
