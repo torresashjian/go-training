@@ -7,9 +7,15 @@ import (
 	"github.com/torresashjian/go-training/sort"
 	"github.com/torresashjian/go-training/strings"
 	"github.com/torresashjian/go-training/types"
+	"github.com/torresashjian/go-training/conversions"
 )
 
 func main(){
+	conversions.ValidConversions()
+	conversions.InvalidConversions()
+}
+
+func main_testtypes(){
 	fmt.Println("In TestTypes")
 	types.TestTypes()
 }
