@@ -1,5 +1,7 @@
 package conversions
 
+import "fmt"
+
 type MyMapType map[string]string
 
 func ValidConversions(){
@@ -23,6 +25,15 @@ func ValidConversions(){
 	toInt := int8(myFloat32)
 	println(toInt)
 
+	//overflow conversions
+	convertOverflowint64()
+}
+
+func convertOverflowint64(){
+	maxint64:=1<<63 - 1
+	// attempt conversion
+	println(fmt.Sprintf("Within boundary int64: %d", int64(maxint64)))
+	println(fmt.Sprintf("Overflow int64: %d", int64(maxint64+300000)))
 }
 
 func InvalidConversions(){
