@@ -8,9 +8,14 @@ import (
 	"github.com/torresashjian/go-training/strings"
 	"github.com/torresashjian/go-training/types"
 	"github.com/torresashjian/go-training/conversions"
+	"github.com/torresashjian/go-training/limits"
 )
 
 func main(){
+	limits.TestMemLimits()
+}
+
+func main_conversions(){
 	conversions.ValidConversions()
 	conversions.InvalidConversions()
 }
