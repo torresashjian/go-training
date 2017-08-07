@@ -1,12 +1,10 @@
 language: go
 sudo: false
 go:
-  - 1.7
-  - master
-
+  - 1.7.x
 jobs:
   include:
     - stage: test
-      script: go test ./...
+      script: go test -v ./...
     - stage: install
       script: go install ./...
