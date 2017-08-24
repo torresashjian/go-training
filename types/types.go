@@ -3,7 +3,8 @@ package types
 import "fmt"
 
 type MyType int
-func(t *MyType) Method1(){
+
+func (t *MyType) Method1() {
 	fmt.Println("Test here")
 }
 
@@ -15,8 +16,7 @@ type EmbAnotherType struct {
 	MyType
 }
 
-
-func TestTypes(){
+func TestTypes() {
 	m := new(MyType)
 	m.Method1()
 

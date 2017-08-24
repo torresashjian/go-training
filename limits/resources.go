@@ -2,10 +2,9 @@ package limits
 
 import "fmt"
 
-
 // Use a uint64
-func TestMemLimits(){
-	maxint64:=1<<63 - 1
+func TestMemLimits() {
+	maxint64 := 1<<63 - 1
 
 	size, exponent := getSize(uint64(maxint64))
 
@@ -13,10 +12,9 @@ func TestMemLimits(){
 
 	fmt.Printf("size>>6: '%d' \n", size>>6)
 
+	limitSet := make([]uint64, size>>6)
 
-	limitSet :=  make([]uint64, size>>6)
-
-	for key, _ := range limitSet{
+	for key, _ := range limitSet {
 		limitSet[key] = 1
 	}
 

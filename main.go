@@ -3,24 +3,24 @@ package main
 import (
 	"fmt"
 	"github.com/torresashjian/go-training/arrays"
+	"github.com/torresashjian/go-training/conversions"
+	"github.com/torresashjian/go-training/limits"
 	"github.com/torresashjian/go-training/p2p"
 	"github.com/torresashjian/go-training/sort"
 	"github.com/torresashjian/go-training/strings"
 	"github.com/torresashjian/go-training/types"
-	"github.com/torresashjian/go-training/conversions"
-	"github.com/torresashjian/go-training/limits"
 )
 
-func main(){
+func main() {
 	limits.TestMemLimits()
 }
 
-func main_conversions(){
+func main_conversions() {
 	conversions.ValidConversions()
 	conversions.InvalidConversions()
 }
 
-func main_testtypes(){
+func main_testtypes() {
 	fmt.Println("In TestTypes")
 	types.TestTypes()
 }
