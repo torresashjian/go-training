@@ -2,7 +2,7 @@ package crypto
 
 import "testing"
 
-const certExample =`
+const rootExample =`
 -----BEGIN CERTIFICATE-----
 MIICQzCCAeqgAwIBAgIRAJ1WKngOM7+D48dY1wiKKGIwCgYIKoZIzj0EAwIwczEL
 MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
@@ -19,8 +19,15 @@ hPtTlaf1Vl+D+bCGdgPuzM9QMAoGCCqGSM49BAMCA0cAMEQCIGn4eOM6TgqCbimX
 WcNNpsFRyA==
 -----END CERTIFICATE-----`
 
+const privKey =`
+-----BEGIN PRIVATE KEY-----
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgY/ymm7IP3QnzBLFq
+rvZ+dSLyESdsiLY5CuH9D2ReWWGhRANCAASeKvjU9BesoVO7UXOFg7Pw3folbsy0
+ds0CMAB1CRaR7NXch40tWsD4FjGUPtHGTff4PpY6EfAahRAmrFfopOyy
+-----END PRIVATE KEY-----`
+
 func TestDecodeCertificate(t *testing.T){
-	err := DecodePemCertificate(certExample)
+	err := DecodePemCertificate(rootExample)
 	if err != nil{
 		t.Error(err)
 		t.Fail()
